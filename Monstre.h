@@ -21,7 +21,7 @@ private:
     int _recompense_tresor;
     int _recompense_niveau;
 public:
-    Monstre(std::string name);
+    Monstre(std::string name, int niveau , int recompense_tresor , int recompense_niveau);
     ~Monstre();
     int get_recompense_tresor();
     int get_recompense_niveau();
