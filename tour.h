@@ -3,5 +3,6 @@
 #include <string>
 
 void tour(Personage personageActuel);
+void attaquerMonstre(Personage personageActuel);
 
 #endif

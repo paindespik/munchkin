@@ -6,21 +6,7 @@
 #include "Malediction.h"
 using namespace std;
 
-void tour(Personnage personnageActuel){
-	int i=0;
-	Carte premiereCarte=personnageActuel.ouvrirPorteDebut();
-	if (premiereCarte.get_type()==monstre){
-		if (personnageActuel.combat(premiereCarte)){
-			personnageActuel.battreMonstre(premiereCarte);
-		}
-		else{
-			personnageActuel.incidentFacheux(premiereCarte);
-		}
-
-
-	}
-	else if (premiereCarte.get_type()==malediction){
-		personnageActuel.effetMalediction(premiereCarte);
+void attaquerMonstre(Personnage personnageActuel){
 
 		int nb_carte_monstre=0;
 		i=0;
@@ -45,7 +31,8 @@ void tour(Personnage personnageActuel){
 					cin >> choixCarte; 
 				}
 				if (personnageActuel.combat(personnageActuel.sac_a_dos[choixCarte])){
-					personnageActuel.battreMonstre(personnageActuel.sac_a_dos[choixCarte]);
+					pers
+					onnageActuel.battreMonstre(personnageActuel.sac_a_dos[choixCarte]);
 			
 				}
 				else{
@@ -54,5 +41,28 @@ void tour(Personnage personnageActuel){
 
 			}
 		}
+	}
+
+
+void tour(Personnage personnageActuel){
+	int i=0;
+	Carte premiereCarte=personnageActuel.ouvrirPorteDebut();
+	if (premiereCarte.get_type()==monstre){
+		if (personnageActuel.combat(premiereCarte)){
+			personnageActuel.battreMonstre(premiereCarte);
+		}
+		else{
+			personnageActuel.incidentFacheux(premiereCarte);
+		}
+
+
+	}
+	else if (premiereCarte.get_type()==malediction){
+		personnageActuel.effetMalediction(premiereCarte);
+		attaquerMonstre(personnageActuel);
+
+	}
+	else if(premiereCarte.get_type()==sort){
+		
 	}
 }

@@ -60,7 +60,7 @@ Carte Personnage::ouvrirPorteDebut(){
 }
 
 Carte Personnage::ouvrirPorte(){
-
+	
 }
 
 #endif
