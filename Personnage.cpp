@@ -5,7 +5,8 @@
 #include "Personnage.h"
 using namespace std;
 #include "carte.h"
-
+#include "Monstre.h"
+#include "Malediction.h"
 Personnage::Personnage(sexe sex){
 	_sexe=sex;
 
@@ -32,4 +33,16 @@ void Personnage::calculerForce(carte aEquiper){
 
 void Personnage::ajouterNiveau(int niveau){
 	_niveau+=niveau;
+}
+
+void incidentFacheux(Monstre monstre){
+
+}
+
+void afficherSacADos() const{
+	int i=0;
+	while(i<sac_a_dos.size()){
+		sac_a_dos[i].print_info();
+		i++;
+	}
 }

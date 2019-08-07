@@ -19,6 +19,9 @@ public:
 	bool combat(Carte monstreACombattre);
 	void calculerForce(carte aEquiper);
 	void ajouterNiveau(int niveau);
+	void incidentFacheux(Monstre monstre);
+	void effetMalediction(Malediction malediction);
+	virtual void afficherSacADos() const;
 
 private:
 	sexe _sexe;
