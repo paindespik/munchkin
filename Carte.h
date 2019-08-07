@@ -22,6 +22,7 @@ protected:
 public:
     Carte(name);
     type_carte get_type();
+    virtual void print_info();
     ~Carte();
 };
 
