@@ -1,12 +1,22 @@
 #include "Carte.h"
 #include <string>
 
+typedef body_parts{
+    int head;
+    int arms;
+    int chest;
+    int legs;
+    int foots;
+};
+
+
 class Objet : public Carte
 {
 private:
-    int force;
+    int _force;
+    body_parts body_usage; 
 public:
-    Objet(/* args */);
+    Objet(name, force);
     ~Objet();
 };
 

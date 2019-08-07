@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 
+
 enum type_carte{
     objet,
     race,
@@ -16,6 +17,7 @@ class Carte
 {
 protected:
     std::string _name;
+    std::string _description;
     type_carte _type;
 public:
     Carte(name);
