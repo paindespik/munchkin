@@ -2,6 +2,7 @@
 #define DEF_PERSONNAGE
 #include <string>
 #include <vector>
+#include "carte.h"
 
 class Personnage {
 public:
@@ -12,7 +13,12 @@ public:
 	};
 	Personnage(sexe sex);
 	~Personnage();
-	Cartes ouvirPorte();
+	Carte ouvirPorteDebut();
+	Carte ouvrirPorte();
+	Carte ouvrirTresor();
+	bool combat(Carte monstreACombattre);
+	void calculerForce(carte aEquiper);
+	void ajouterNiveau(int niveau);
 
 private:
 	sexe _sexe;
@@ -21,7 +27,7 @@ private:
 	nb_main;
 	nb_pied;
 	nb_tete;
-	int niveau;
-	int force;
+	int _niveau;
+	int _force;
 };
 #endif;

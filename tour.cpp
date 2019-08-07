@@ -1,7 +1,18 @@
 #include <string>
+#include "Carte.h"
 using namespace std;
 
 void tour(Personnage personnageActuel){
-	personnageActuel.ouvrirPorte();
-	if personnageActuel.sac_a_dos[sac_a_dos.size()-1].get_type()==objet
+	Carte premiereCarte=personnageActuel.ouvrirPorteDebut();
+	if (Premierecarte.get_type()==monstre){
+		if (personnageActuel.combat(premiereCarte)){
+			int i=0;
+			while(i<premiereCarte._recompense){
+				personnageActuel.ajouterNiveau(premiereCarte._recompenseNiveau);
+				personnageActuel.ouvrirTresor();
+				i++;
+			}
+		}
+
+	}
 }

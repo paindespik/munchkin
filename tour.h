@@ -2,6 +2,6 @@
 #define DEF_TOUR
 #include <string>
 
-void tour();
+void tour(Persoonage persoonageActuel);
 
 #endif
