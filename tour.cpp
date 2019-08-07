@@ -2,6 +2,8 @@
 #include <iostream>
 #include "Carte.h"
 #include "Personnage.h"
+#include "Monstre.h"
+#include "Malediction.h"
 using namespace std;
 
 void tour(Personnage personnageActuel){
