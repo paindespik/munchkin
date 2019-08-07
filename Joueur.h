@@ -7,7 +7,7 @@
 class Joueur{
 public:
 	Joueur(std::string nom, sexe sex);
-	virtual void affiher() const;
+	virtual void afficher() const;
 private:
 	sexe _sexe;
 	std::string _nom;
