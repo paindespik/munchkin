@@ -21,6 +21,7 @@ public:
 	void ajouterNiveau(int niveau);
 	void incidentFacheux(Monstre monstre);
 	void effetMalediction(Malediction malediction);
+	void battreMonstre(Monstre monstre);
 	virtual void afficherSacADos() const;
 
 private:

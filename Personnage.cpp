@@ -35,14 +35,28 @@ void Personnage::ajouterNiveau(int niveau){
 	_niveau+=niveau;
 }
 
-void incidentFacheux(Monstre monstre){
+void Personnage::incidentFacheux(Monstre monstre){
 
 }
 
-void afficherSacADos() const{
+void Personnage::afficherSacADos() const{
 	int i=0;
-	while(i<sac_a_dos.size()){
+	while(i<=sac_a_dos.size()){
 		sac_a_dos[i].print_info();
 		i++;
 	}
 }
+
+void Personnage::battreMonstre(Monstre monstre){
+			
+			while(i<monstre._recompense){
+
+				ouvrirTresor();
+				i++;
+			}
+			ajouterNiveau(premiereCarte._recompenseNiveau);
+
+		}
+}
+
+
