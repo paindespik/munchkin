@@ -13,6 +13,7 @@ private:
 public:
     Objet(std::string name,int force);
     ~Objet();
+    int get_force();
 };
 
 
