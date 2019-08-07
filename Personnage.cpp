@@ -1,12 +1,9 @@
-#ifndef DEF_PERSONNAGE
-#define DEF_PERSONNAGE
-
 #include <string>
 #include <vector>
 using namespace std;
 
 #include "Personnage.h"
-#include "Carte.h"
+#include "Objet.h"
 #include "Monstre.h"
 #include "Malediction.h"
 
@@ -19,15 +16,15 @@ Personnage::~Personnage(){
 
 }
 
-bool Personnage::combat(Carte monstreACombattre){
-	if (_force>monstreACombattre._force){
+bool Personnage::combat(Monstre monstreACombattre){
+	if (_force>monstreACombattre.get_force()){
 		return true;
 	}
 	return false;
 }
 
-void Personnage::calculerForce(carte aEquiper){
-	_force+=aEquiper._force;
+void Personnage::calculerForce(Objet aEquiper){
+	_force+=aEquiper.get_force();
 }
 
 void Personnage::ajouterNiveau(int niveau){
@@ -38,7 +35,7 @@ void Personnage::incidentFacheux(Monstre monstre){
 
 }
 
-void Personnage::afficherSacADos() const{
+void Personnage::afficherSacADos(){
 	int i=0;
 	while(i<=sac_a_dos.size()){
 		sac_a_dos[i].print_info();
@@ -46,12 +43,13 @@ void Personnage::afficherSacADos() const{
 	}
 }
 
-void Personnage::battreMonstre(Monstre monstre){		
+void Personnage::battreMonstre(Monstre monstre){	
+	int i=0;	
 	while(i<monstre.get_recompense_tresor()){
 		ouvrirTresor();
 		i++;
 	}
-	ajouterNiveau(premiereCarte.get_recompense_niveau());
+	ajouterNiveau(monstre.get_recompense_niveau());
 }
 
 
@@ -62,5 +60,3 @@ Carte Personnage::ouvrirPorteDebut(){
 Carte Personnage::ouvrirPorte(){
 	
 }
-
-#endif

@@ -11,13 +11,13 @@ enum effets_maleciction{
 };
 
 
-class Objet : public Carte
+class Malediction : public Carte
 {
 private:
     effets_maleciction _effet_malediction;
 public:
-    Objet(std::string name);
-    ~Objet();
+    Malediction(std::string name);
+    ~Malediction();
 };
 
 #endif

@@ -26,13 +26,13 @@ public:
 	Carte ouvrirPorteDebut();
 	Carte ouvrirPorte();
 	Carte ouvrirTresor();
-	bool combat(Carte monstreACombattre);
-	void calculerForce(Carte aEquiper);
+	bool combat(Monstre monstreACombattre);
+	void calculerForce(Objet aEquiper);
 	void ajouterNiveau(int niveau);
 	void incidentFacheux(Monstre monstre);
 	void effetMalediction(Malediction malediction);
 	void battreMonstre(Monstre monstre);
-	virtual void afficherSacADos() const;
+	virtual void afficherSacADos();
 
 	std::vector<Carte> sac_a_dos;
 
