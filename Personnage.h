@@ -2,16 +2,11 @@
 #define DEF_PERSONNAGE
 #include <string>
 #include <vector>
-#include "carte.h"
+#include "Carte.h"
+#include "Objet.h"
+#include "Monstre.h"
+#include "Malediction.h"
 
-
-typedef struct body_parts{
-    int head;
-    int arms;
-    int chest;
-    int legs;
-    int foots;
-};
 
 enum sexe{
 	homme,
@@ -43,4 +38,5 @@ private:
 	int _niveau;
 	int _force;
 };
-#endif;
+
+#endif

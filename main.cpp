@@ -4,14 +4,13 @@
 
 #include <iostream>
 #include <string>
+
 using namespace std;
 
-int main{
-	cout << "Bien le bonjour aventuriers !" << endl; 
+int main(int argc, char const *argv[])
+{
+	cout << "Bien le bonjour aventuriers !" << endl;
 
-	joueur = Joueur("Tom",homme);
-
-
-
+	Joueur joueur("Tom",homme);
 	return 0;
 }

@@ -13,12 +13,19 @@ enum type_carte{
     classe
 };
 
-typedef struct body_parts{
+struct body_parts{
     int head;
     int arms;
     int chest;
     int legs;
     int foots;
+};
+
+enum incidents_facheux{
+    perte_niveau,
+    perte_objet,
+    gain_niveau,
+    mort
 };
 
 class Carte

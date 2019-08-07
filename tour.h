@@ -1,8 +1,9 @@
 #ifndef DEF_TOUR
 #define DEF_TOUR
 #include <string>
+#include "Personnage.h"
 
-void tour(Personage personageActuel);
-void attaquerMonstre(Personage personageActuel);
+void tour(Personnage personageActuel);
+void attaquerMonstre(Personnage personageActuel);
 
 #endif

@@ -4,12 +4,13 @@
 #include "Personnage.h"
 #include "Monstre.h"
 #include "Malediction.h"
+
 using namespace std;
 
 void attaquerMonstre(Personnage personnageActuel){
 
 		int nb_carte_monstre=0;
-		i=0;
+		int i=0;
 		int choix;
 		while(i<personnageActuel.sac_a_dos.size()){
 			if(personnageActuel.sac_a_dos[i].get_type==monstre){
@@ -31,12 +32,11 @@ void attaquerMonstre(Personnage personnageActuel){
 					cin >> choixCarte; 
 				}
 				if (personnageActuel.combat(personnageActuel.sac_a_dos[choixCarte])){
-					pers
-					onnageActuel.battreMonstre(personnageActuel.sac_a_dos[choixCarte]);
+					personnageActuel.battreMonstre(personnageActuel.sac_a_dos[choixCarte]);
 			
 				}
 				else{
-				personnageActuel.incidentFacheux(premiereCarte);
+					personnageActuel.incidentFacheux(premiereCarte);
 				}
 
 			}
