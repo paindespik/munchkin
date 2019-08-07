@@ -4,33 +4,42 @@
 #include <vector>
 #include "carte.h"
 
+
+typedef struct body_parts{
+    int head;
+    int arms;
+    int chest;
+    int legs;
+    int foots;
+};
+
+enum sexe{
+	homme,
+	femme,
+	hermaphrodite
+};
+
 class Personnage {
 public:
-	enum sexe{
-		homme,
-		femme,
-		hermaphrodite
-	};
 	Personnage(sexe sex);
 	~Personnage();
-	Carte ouvirPorteDebut();
+	Carte ouvrirPorteDebut();
 	Carte ouvrirPorte();
 	Carte ouvrirTresor();
 	bool combat(Carte monstreACombattre);
-	void calculerForce(carte aEquiper);
+	void calculerForce(Carte aEquiper);
 	void ajouterNiveau(int niveau);
 	void incidentFacheux(Monstre monstre);
 	void effetMalediction(Malediction malediction);
 	void battreMonstre(Monstre monstre);
 	virtual void afficherSacADos() const;
 
+	std::vector<Carte> sac_a_dos;
+
 private:
 	sexe _sexe;
-	std::vector<Carte> sac_a_dos;
-	std::vector<carte> equipement;
-	nb_main;
-	nb_pied;
-	nb_tete;
+	std::vector<Carte> equipement;
+
 	int _niveau;
 	int _force;
 };

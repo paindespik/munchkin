@@ -1,6 +1,9 @@
+#include "Objet.h"
 #include <iostream>
+using namespace std;
 
-Objet::Objet(name, force):Carte(name), _force(force){
+
+Objet::Objet(string name, int force):Carte(name), _force(force){
     
 }
 

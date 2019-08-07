@@ -1,19 +1,18 @@
 #ifndef DEF_PERSONNAGE
 #define DEF_PERSONNAGE
+
 #include <string>
 #include <vector>
-#include "Personnage.h"
 using namespace std;
-#include "carte.h"
+
+#include "Personnage.h"
+#include "Carte.h"
 #include "Monstre.h"
 #include "Malediction.h"
+
+
 Personnage::Personnage(sexe sex){
 	_sexe=sex;
-
-}
-
-Cartes ouvrirPorte(){
-
 }
 
 Personnage::~Personnage(){
@@ -47,16 +46,19 @@ void Personnage::afficherSacADos() const{
 	}
 }
 
-void Personnage::battreMonstre(Monstre monstre){
-			
-			while(i<monstre._recompense){
-
-				ouvrirTresor();
-				i++;
-			}
-			ajouterNiveau(premiereCarte._recompenseNiveau);
-
-		}
+void Personnage::battreMonstre(Monstre monstre){		
+	while(i<monstre._recompense){
+		ouvrirTresor();
+		i++;
+	}
+	ajouterNiveau(premiereCarte._recompenseNiveau);
 }
 
 
+Carte Personnage::ouvrirPorteDebut(){
+
+}
+
+Carte Personnage::ouvrirPorte(){
+
+}

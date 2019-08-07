@@ -1,7 +1,10 @@
+#ifndef DEF_OBJET
+#define DEF_OBJET
+
 #include "Carte.h"
 #include <string>
 
-typedef body_parts{
+typedef struct body_parts{
     int head;
     int arms;
     int chest;
@@ -16,10 +19,10 @@ private:
     int _force;
     body_parts body_usage; 
 public:
-    Objet(name, force);
+    Objet(std::string name,int force);
     ~Objet();
 };
 
 
 
-#ifndef 
+#endif

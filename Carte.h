@@ -11,7 +11,7 @@ enum type_carte{
     malediction,
     sort,
     classe
-}
+};
 
 class Carte
 {
@@ -20,7 +20,7 @@ protected:
     std::string _description;
     type_carte _type;
 public:
-    Carte(name);
+    Carte(std::string name);
     type_carte get_type();
     virtual void print_info();
     ~Carte();

@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-Carte::Carte(name)
+Carte::Carte(string name)
 {
     _name = name;
 }

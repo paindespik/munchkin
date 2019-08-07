@@ -1,5 +1,5 @@
 #include <string>
-#include 
+#include <iostream>
 #include "Carte.h"
 #include "Personnage.h"
 using namespace std;
@@ -9,9 +9,7 @@ void tour(Personnage personnageActuel){
 	Carte premiereCarte=personnageActuel.ouvrirPorteDebut();
 	if (premiereCarte.get_type()==monstre){
 		if (personnageActuel.combat(premiereCarte)){
-			personnageActuel.battreMonstre();
-			
-
+			personnageActuel.battreMonstre(premiereCarte);
 		}
 		else{
 			personnageActuel.incidentFacheux(premiereCarte);
@@ -21,15 +19,17 @@ void tour(Personnage personnageActuel){
 	}
 	else if (premiereCarte.get_type()==malediction){
 		personnageActuel.effetMalediction(premiereCarte);
+
 		int nb_carte_monstre=0;
 		i=0;
+		int choix;
 		while(i<personnageActuel.sac_a_dos.size()){
-			if(sac_a_dos[i].get_type==monstre){
+			if(personnageActuel.sac_a_dos[i].get_type==monstre){
 				nb_carte_monstre++;
 			}
 			i++;
-			int choix;
 		}
+		
 		if(nb_carte_monstre!=0){
 			personnageActuel.afficherSacADos();
 			cout << "voulez-vous jouer un monstre (0 pour non et 1 pour oui)" << endl;
@@ -42,8 +42,8 @@ void tour(Personnage personnageActuel){
 					cout<< "vous devez donner un nombre entre 0 et la taille-1 de votre sac a dos" << endl;
 					cin >> choixCarte; 
 				}
-				if (personnageActuel.combat(sac_a_dos[choixCarte])){
-					personnageActuel.battreMonstre();
+				if (personnageActuel.combat(personnageActuel.sac_a_dos[choixCarte])){
+					personnageActuel.battreMonstre(personnageActuel.sac_a_dos[choixCarte]);
 			
 				}
 				else{

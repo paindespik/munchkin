@@ -2,14 +2,10 @@
 #define DEF_JOUEUR
 #include <string>
 #include <vector>
+#include "Personnage.h"
 
 class Joueur{
 public:
-	enum sexe{
-		homme,
-		femme,
-		Hermaphrodite
-	};
 	Joueur(std::string nom, sexe sex);
 	virtual void affiher() const;
 private:
