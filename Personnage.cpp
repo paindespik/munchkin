@@ -9,3 +9,11 @@ Personnage::Personnage(sexe sex){
 	_sexe=sex;
 	
 }
+
+Cartes ouvrirPorte(){
+	
+}
+
+Personnage::~Personnage(){
+	
+}

@@ -11,12 +11,13 @@ public:
 		hermaphrodite
 	};
 	Personnage(sexe sex);
+	~Personnage();
 	Cartes ouvirPorte();
 
 private:
 	sexe _sexe;
-	vector<Carte> sac_a_dos;
-	vector<carte> equipement;
+	std::vector<Carte> sac_a_dos;
+	std::vector<carte> equipement;
 	nb_main;
 	nb_pied;
 	nb_tete;
