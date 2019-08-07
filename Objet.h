@@ -4,14 +4,6 @@
 #include "Carte.h"
 #include <string>
 
-typedef struct body_parts{
-    int head;
-    int arms;
-    int chest;
-    int legs;
-    int foots;
-};
-
 
 class Objet : public Carte
 {

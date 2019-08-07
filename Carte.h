@@ -13,6 +13,14 @@ enum type_carte{
     classe
 };
 
+typedef struct body_parts{
+    int head;
+    int arms;
+    int chest;
+    int legs;
+    int foots;
+};
+
 class Carte
 {
 protected:

@@ -47,11 +47,11 @@ void Personnage::afficherSacADos() const{
 }
 
 void Personnage::battreMonstre(Monstre monstre){		
-	while(i<monstre._recompense){
+	while(i<monstre.get_recompense_tresor()){
 		ouvrirTresor();
 		i++;
 	}
-	ajouterNiveau(premiereCarte._recompenseNiveau);
+	ajouterNiveau(premiereCarte.get_recompense_niveau());
 }
 
 
@@ -62,3 +62,5 @@ Carte Personnage::ouvrirPorteDebut(){
 Carte Personnage::ouvrirPorte(){
 
 }
+
+#endif
