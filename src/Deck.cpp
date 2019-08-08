@@ -1,6 +1,13 @@
-#include "Deck.h"
 #include <stdexcept>
 #include <iostream>
+
+#include "Deck.h"
+#include "Carte.h"
+#include "Objet.h"
+#include "Monstre.h"
+#include "Malediction.h"
+
+
 using namespace std;
 
 Deck::Deck(type_deck type)
@@ -19,9 +26,7 @@ Deck::Deck(type_deck type)
     }
 }
 
-Deck::~Deck()
-{
-}
+
 
 Carte Deck::pioche(){
     Carte retiree = *_pile_carte.back();

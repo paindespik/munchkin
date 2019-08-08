@@ -16,6 +16,7 @@ public:
     void AjouterInventaire(Carte carte);
     void mortPersonnage();
     void combat();
+    void ouvrirPorte();
     
 private:
     std::string _nom;
