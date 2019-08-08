@@ -1,17 +1,18 @@
-#ifndef DEF_JOUEUR
-#define DEF_JOUEUR
+#ifndef DEF_JOUEUR_H
+#define DEF_JOUEUR_H
+
 #include <string>
-#include <vector>
-#include "Personnage.h"
+#include <iostream>
+
+
 
 class Joueur{
 public:
-	Joueur(std::string nom, sexe sex);
-	virtual void afficher() const;
+    Joueur(string nom, sexe sex);
+    virtual void afficher() const;
 private:
-	sexe _sexe;
-	std::string _nom;
-
+    string _nom;
+    Personnage personnageActuel;
 };
 
 #endif
