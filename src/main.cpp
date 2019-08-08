@@ -9,4 +9,5 @@ using namespace std;
 int main(){
     Joueur joueur1("sean");
     Joueur joueur2("baptiste");
+    cout << "beuleu" <<endl;
 }
