@@ -7,6 +7,7 @@
 
 using namespace std;
 int main(){
+    cout << "Bienvenu trés cher aventurier !" << endl;
     Joueur joueur1("sean");
     Joueur joueur2("baptiste");
 }

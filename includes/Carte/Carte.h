@@ -2,6 +2,7 @@
 #define DEF_CARTE_H
 
 #include <string>
+
 enum type{
     carte,
     objet,
