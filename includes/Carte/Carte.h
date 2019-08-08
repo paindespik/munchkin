@@ -3,6 +3,7 @@
 
 #include <string>
 
+
 enum type{
     carte,
     objet,
@@ -30,6 +31,7 @@ enum incidents_facheux{
 class Carte{
 public:
     Carte(std::string nom);
+    void print_info();
 protected:
     std::string _nom;
     type _type;
