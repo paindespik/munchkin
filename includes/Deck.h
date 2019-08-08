@@ -23,7 +23,6 @@ private:
     std::vector <Carte*> _pile_carte;
 public:
     Deck(type_of_deck type);
-    ~Deck();
     Carte pioche();
     void place(Carte carte);
     void print_top_card();
