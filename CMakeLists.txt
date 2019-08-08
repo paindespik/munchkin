@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(munchkin VERSION 0.1.0)
 
-include_directories(includes includes/Cartes)
+include_directories(includes includes/Carte)
 
 file(GLOB SOURCES
     includes/*.h

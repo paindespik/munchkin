@@ -11,6 +11,22 @@ enum type{
     malediction
 };
 
+struct body_parts{
+    int head;
+    int arms;
+    int chest;
+    int legs;
+    int foots;
+};
+
+enum incidents_facheux{
+    perte_niveau,
+    perte_objet,
+    gain_niveau,
+    mort
+};
+
+
 class Carte{
 public:
     Carte(std::string nom);
