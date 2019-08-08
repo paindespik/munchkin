@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Carte/Carte.h"
+#include "Carte.h"
 
 using namespace std;
 

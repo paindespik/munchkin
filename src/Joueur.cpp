@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 #include "Personnage.h"
-#include "Carte/Carte.h"
+#include "Carte.h"
 #include "Joueur.h"
 using namespace std;
 
@@ -21,7 +21,7 @@ void Joueur::AjouterInventaire(Carte carte){
 
 void Joueur::mortPersonnage(){
     Personnage personnage1(homme);
-    personnageActuel=personnage1;
+    personnageActuel = personnage1;
 }
 
 void Joueur::afficher() const {
