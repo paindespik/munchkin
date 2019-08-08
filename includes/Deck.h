@@ -11,7 +11,7 @@
 
 #define DECK_SIZE 40
 
-enum type_deck{
+enum type_of_deck{
     tresor,
     portes
 };
@@ -22,7 +22,7 @@ class Deck
 private:
     std::vector <Carte*> _pile_carte;
 public:
-    Deck(type_deck type);
+    Deck(type_of_deck type);
     ~Deck();
     Carte pioche();
     void place(Carte carte);
