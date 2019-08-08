@@ -3,7 +3,7 @@
 using namespace std;
 
 
-Objet::Objet(string name, int force):Carte(name){
+Objet::Objet(string name, int force):Carte(name, objet){
     _force = force;
 }
 

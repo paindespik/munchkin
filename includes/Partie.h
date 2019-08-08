@@ -9,7 +9,7 @@
 class Partie
 {
 private:
-    vector<Joueur> liste_joueurs;
+    std::vector<Joueur> liste_joueurs;
 public:
     Partie();
     ~Partie();

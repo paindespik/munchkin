@@ -31,6 +31,7 @@ enum incidents_facheux{
 class Carte{
 public:
     Carte(std::string nom);
+    Carte(std::string nom, type type_carte);
     void print_info();
 protected:
     std::string _nom;
