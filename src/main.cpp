@@ -10,7 +10,7 @@ using namespace std;
 
 
 int main(){
-    cout << "Bienvenu trés cher aventurier !" << endl;
+    cout << "Bienvenue très cher aventurier !" << endl;
     Joueur joueur1("sean");
     Joueur joueur2("baptiste");
     Deck deck_tresor(tresor);
@@ -18,3 +18,4 @@ int main(){
 
     cout << "beuleu" <<endl;
 }
+
