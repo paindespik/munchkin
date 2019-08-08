@@ -12,16 +12,16 @@
 #include "Monstre.h"
 #include "Objet.h"
 
-class tour
+class Tour
 {
 private:
 
 public:
-    tour(Joueur joueurCourant);
-    ~tour();
+    Tour(Joueur joueurCourant);
 
 private:
     Joueur _joueurCourant;
 };
 
+#endif
 

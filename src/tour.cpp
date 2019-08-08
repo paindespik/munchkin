@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 
+#include "tour.h"
 #include "Joueur.h"
 #include "Personnage.h"
 #include "Carte.h"
@@ -9,11 +10,7 @@
 #include "Monstre.h"
 #include "Objet.h"
 
-tour::tour(Joueur joueurCourant) : _joueurCourant(joueurCourant)
+Tour::Tour(Joueur joueurCourant) : _joueurCourant(joueurCourant)
 {
     
-}
-
-tour::~tour()
-{
 }
