@@ -7,8 +7,13 @@
 
 using namespace std;
 
-Personnage::Personnage(sexe sex) : _sexe(sex), _niveau(1){
+Personnage::Personnage(){
+    _sexe = homme;
+    _niveau = 1;
+}
 
+Personnage::Personnage(sexe sex) : _sexe(sex), _niveau(1){
+    
 }
 
 vector<Carte> Personnage::getSacADos(){
@@ -18,10 +23,10 @@ vector<Carte> Personnage::getEquipement(){
     return equipement;
 }
 
-void setSacAdos(Carte carte){
-    setSacAdos.push_back(carte);
+void Personnage::setSacADos(Carte carte){
+    sac_a_dos.push_back(carte);
 }
 
-void setEquipement(Carte carte){
+void Personnage::setEquipement(Carte carte){
     equipement.push_back(carte);
 }

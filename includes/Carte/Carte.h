@@ -14,7 +14,7 @@ class Carte{
 public:
     Carte(std::string nom);
 protected:
-    std::string nom;
+    std::string _nom;
     type _type;
 };
 

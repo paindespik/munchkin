@@ -1,14 +1,16 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include "Joueur.h"
+#include "Personnage.h"
 #include "Carte/Carte.h"
+#include "Joueur.h"
 using namespace std;
 
 
-Joueur(string  nom, sexe sex){
+Joueur::Joueur(string nom){
     _nom=nom;
 }
+
 void Joueur::equiperPersonnage(Carte carte){
     personnageActuel.setEquipement(carte);
 }
@@ -17,8 +19,11 @@ void Joueur::AjouterInventaire(Carte carte){
     personnageActuel.setSacADos(carte);
 }
 
-void Joueur::MortPersonnage(){
-    Personnage  personnage1(homme);
+void Joueur::mortPersonnage(){
+    Personnage personnage1(homme);
     personnageActuel=personnage1;
 }
 
+void Joueur::afficher() const {
+
+}

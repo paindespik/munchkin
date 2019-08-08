@@ -4,6 +4,6 @@
 
 using namespace std;
 
-Carte::Carte(string nom) : _nom(nom) _type(carte) {
+Carte::Carte(string nom) : _nom(nom), _type(carte) {
 
 }
