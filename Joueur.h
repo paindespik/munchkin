@@ -3,15 +3,22 @@
 
 #include <string>
 #include <iostream>
+#include "Carte/Carte.h"
+#include "Personnage.h"
 
 
 
 class Joueur{
 public:
-    Joueur(string nom, sexe sex);
+    Joueur(std::string nom);
     virtual void afficher() const;
+    void equiperPersonnage(Carte carte);
+    void AjouterInventaire(Carte carte);
+    void mortPersonnage();
+    void combat();
+    
 private:
-    string _nom;
+    std::string _nom;
     Personnage personnageActuel;
 };
 
