@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Carte/Carte.h"
 
 enum sexe{
     homme,
@@ -11,9 +12,19 @@ enum sexe{
     hermaphrodite
 };
 class Personnage{
-public:
 
+
+public:
+    Personnage(sexe sex);
+    std::vector<Carte> getSacADos();
+    std::vector<Carte> getEquipement();
+    void setSacADos(Carte carte);
+    void setEquipement(Carte carte);
 private:
+    std::vector<Carte> sac_a_dos;
+    std::vector<Carte> equipement;
     int _niveau;
-    sexe _sexe
+    sexe _sexe;
 };
+
+#endif
